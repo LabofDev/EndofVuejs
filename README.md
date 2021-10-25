@@ -3,13 +3,27 @@
 ## 1. Study Agenda
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-1.init`**
 - summary
+  - 강좌에서 개발할 웹어플리케이션에 대해서 확인하고 일반적인 웹개발 절차와 API 문서에 대해서 알아본다.
 ### 1.1 Introduce Application
+  - `회원가입`, `로그인`, `CRUD`가 발생하는 기본적인 웹어플리케이션
 ### 1.2 Procedure of Front-End Development
+- 웹 개발 절차
+  - 요구사항 > 서비스 기획 > UI, UX 상세 설계 > GUI 디자인 > 퍼블리싱 > Back-End API 개발 > Front-End 개발 > QA
+- Front-End 개발자의 역할
+  - Client UI에 대한 코드 작성
+  - 기획, 디자인, 퍼블리싱, Back-End 개발자와 소통
 ### 1.3 Document of API
+- [Swagger UI](https://swagger.io/)
+  - [Swagger](https://ko.wikipedia.org/wiki/%EC%8A%A4%EC%9B%A8%EA%B1%B0_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4))는 개발자가 RESTfull API를 설계, 빌드, 문서화, 소비하는 일을 도와주는 오픈소스 소프트웨어 프레임워크
 
 ## 2. Configuration of Development Environment
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-2.environment`**
 - summary
+
+
+
+
+
 ## 3. Router & Design of Component
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-3.router_component`**
 - summary
