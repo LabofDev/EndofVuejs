@@ -19,9 +19,107 @@
 ## 2. Configuration of Development Environment
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-2.environment`**
 - summary
+  - 개발환경 구성에 대해서 알아본다(깃허브, 필수 설치 프로그램, )
+### 2.1 개발 환경(Tools)
+  - [Chrome](https://www.google.com/intl/ko/chrome/), [Git](https://git-scm.com/downloads), [Visual Studio Code](https://code.visualstudio.com/), [Node.js LTS 버전(v10.x 이상)](https://nodejs.org/ko/), [Vue.js Dev Tools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+  - Github
+    - [개발 소스(Front-End) - Source](https://github.com/joshua1988/vue-til), [API(Back-End) - Source](https://github.com/joshua1988/vue-til-server)
+  - VS Code Plugin
+    - 색 테마 : [Night Owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
+    - 파일 아이콘 테마 : [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+    - 뷰 확장 플러그인 : [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+    - 뷰 코드 스니펫 : [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)
+    - 문법 검사 : [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
+    - 실습 환경 보조 : [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+    - 기타
+      - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense), [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager), [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css), [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag), [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens), [Atom Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings), [Jetbrains IDE Keymap](https://marketplace.visualstudio.com/items?itemName=isudox.vscode-jetbrains-keybindings) 등
+
+### 2.2 개발 환경 (Visual Studio Code Gitbash Terminal)
+- [git bash](https://git-scm.com/downloads)는 Windows에서도 Linux 명령어를 사용할 수 있는 환경
+- Visual Studio Code에서도 `gitbash` 터미널을 사용할 수 있다.(본 강좌에서는 사용해야 함)
+- 기존의 `terminal.integrated.shell.windows`에 대해서 VSCode 업데이트 됨에 사용할 수 없음([참고](https://code.visualstudio.com/updates/v1_56))
+- `Visual Studio Code` > `ctrl + ,` > `terminal.integrated.shell.windows` > `setting.json` open > 하기의 코드 추가
+```json
+"terminal.integrated.profiles.windows": {
+    "GitBash": {
+        // 일반적으로 : "C:\\Git\\bin\\bash.exe"
+        "path":["사용자별 git 설치 경로\\bash.exe"],
+        "icon":"terminal-bash"
+    },
+
+    "PowerShell": {
+        "source": "PowerShell",
+        "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+        "path": [
+            "${env:windir}\\Sysnative\\cmd.exe",
+            "${env:windir}\\System32\\cmd.exe"
+        ],
+        "args": [],
+        "icon": "terminal-cmd"
+    },
 
 
+},
+// "GitBash"로 설정하면 "Bash"가 기본으로 설정 됨
+"terminal.integrated.defaultProfile.windows": "Command Prompt",
+```
 
+### 2.3 개발 환경(Node js)
+- Node 버전 확인 및 업그레이드 & 다운그레이드
+  - 본 강좌의 소스는 `node` 버전이 `v10.16.3`으로 진행해야 함
+  - 특정 버전의 Node를 설치하는 방법은 2가지
+    - *원하는 LTS 버전을 찾아 해당 OS의 실행 파일로 설치 (GUI로 사용)*
+    - *NVM을 사용하여 특정 버전 설치 사용등 (Command Line으로 사용)*
+  ```command
+  $ node -v
+  v14.8.1
+  ```
+  - [Node js - v10.16.3](https://nodejs.org/download/release/v10.16.3/)에서 OS 버전에 맞는 파일을 다운로드 받아 설치 가능
+- NVM(Node Version Manager)
+  - NVM을 이용하여 `nodejs` 특정 버전을 설치, 업그레이드 및 다운그레이드 가능
+  - [Node js](https://nodejs.org/ko/)
+  - [NVM Github](https://github.com/nvm-sh/nvm)
+  - `NVM` 설치
+    - [NVM 설치 및 버전 변경 절차 문서](https://github.com/joshua1988/vue-til-server#nvm-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EB%B2%84%EC%A0%84-%EB%B3%80%EA%B2%BD-%EB%B0%A9%EB%B2%95)
+    - `VSCode` > 터미널을 `Bash`로 열고 하기 명령어 입력
+    ```command
+    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+    ```
+  - NVM 명령어 등록
+    - `VSCode` > 터미널을 `Bash`로 열고 하기 명령어 입력
+    ```command
+    $ vi ~/.bashrc
+    
+    // i : 쓰기모드 진입
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+    // esc : 쓰기모드 해지
+    // :wq : 저장하고 종료 (:q : 저장하지 않고 종료)
+    ```
+    - `bash` 터미널에서 하기 명령어를 입력하여 정상적으로 `NVM`이 설치 및 명령어가 적용되었는지 확인
+    ```command
+    $ nvm --version
+    0.39.0
+    ```
+    - 노드 버전을 그냥 전환하고 싶다면  `nvm use 버전 이름` 사용
+    - [nvm 노드 버전 설치 가이드](https://www.inflearn.com/questions/281892)
+    - `node` 버전 `10.16.3` 설치
+    ```command
+    $ nvm install 10.16.3
+
+    Downloading and installing node v10.16.3...
+    Downloading https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip...
+    ############################################################ 100.0% 
+    Computing checksum with sha256sum
+    Checksums matched!
+    Now using node v10.16.3 (npm v6.9.0)
+    Creating default alias: default -> 10.16.3 (-> v10.16.3)
+
+    $ node -v
+    v10.16.3
+    ```
 
 
 ## 3. Router & Design of Component
