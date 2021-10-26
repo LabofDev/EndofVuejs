@@ -111,7 +111,7 @@
 
     Downloading and installing node v10.16.3...
     Downloading https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip...
-    ############################################################ 100.0% 
+    ################################# 100.0% 
     Computing checksum with sha256sum
     Checksums matched!
     Now using node v10.16.3 (npm v6.9.0)
@@ -120,6 +120,23 @@
     $ node -v
     v10.16.3
     ```
+    - `vue-til-server > package.json` 파일내 패키지 설치를 위한 명령어 실행
+    ```command
+    $ npm i
+    ```
+    - `npm run dev`로 서버 실행
+    ```command
+    $ npm run dev
+
+    ...중략...
+
+    VUE TIL SERVER IS RUNNING ON 3000
+    // '3000'에 대한 포트를 사용중이면 하기에서 변경 가능
+    // src > app.js > port 번호 수정
+    ```
+    - `http://localhost:3000/api/docs`로 접속하여 API 서버 확인
+### 2.4 개발 환경(MongoDB)
+- [MongoDB Site](https://www.mongodb.com/cloud)
 
 
 ## 3. Router & Design of Component
