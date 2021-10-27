@@ -139,11 +139,16 @@
 - [MongoDB Site](https://www.mongodb.com/cloud)
 - `src > app.js`의 `const db`에서 하기의 생성된 DB를 연결
 - <img src="./images/2.4 MongoDB.png" width="100%"/>
-- bash command > npm run dev > Server 기동 > http://localhost:3000/api/docs 접속 > /signup API Test
+- `bash` command > `npm run dev` > Server 기동 > `http://localhost:3000/api/docs` 접속 > /signup API Test
 - <img src="./images/2.4 API Test.png" width="100%"/>
 ### 2.5 개발 환경(Swagger UI API)
 - `Node js`로 작서된 `Back-End API` 코드를 `Front-End` 개발자와 `커뮤니케이션`하기 위한 API UI
 - `RESTfull API`를 직접 테스트 할 수 있는 API UI
+### 2.6 개발 환경(프로젝트 구성)
+- vue --version 으로 vue/cli 버전 확인
+
+
+
 
 
 ## 3. Router & Design of Component
