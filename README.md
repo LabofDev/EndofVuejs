@@ -137,6 +137,10 @@
     - `http://localhost:3000/api/docs`로 접속하여 API 서버 확인
 ### 2.4 개발 환경(MongoDB)
 - [MongoDB Site](https://www.mongodb.com/cloud)
+- `src > app.js`의 `const db`에서 하기의 생성된 DB를 연결
+- <img src="./images/2.4 MongoDB.png" width="100%"/>
+- bash command > npm run dev > Server 기동 > http://localhost:3000/api/docs 접속 > /signup API Test
+- <img src="./images/2.4 API Test.png" width="100%"/>
 
 
 ## 3. Router & Design of Component
