@@ -13,6 +13,11 @@ export default {
   components: {
     HelloWorld,
   },
+  created() {
+    // var a = 10;
+    console.log("Hi");
+    console.log("hi");
+  },
 };
 </script>
 

@@ -145,7 +145,44 @@
 - `Node js`로 작서된 `Back-End API` 코드를 `Front-End` 개발자와 `커뮤니케이션`하기 위한 API UI
 - `RESTfull API`를 직접 테스트 할 수 있는 API UI
 ### 2.6 개발 환경(프로젝트 구성)
-- vue --version 으로 vue/cli 버전 확인
+- [웹팩 데브 서버 설명 글](https://joshua1988.github.io/webpack-guide/devtools/webpack-dev-server.html)
+- [Vue.js 개발 생산성을 높여주는 도구 3가지](https://joshua1988.github.io/web-development/vuejs/boost-productivity/)
+- `vue --version` 으로 vue/cli 버전 확인
+- `vue create vue-til`으로 프로젝트 생성 (Manual로 선택하며, 하기의 이미지 참고)
+  - <img src="./images/2.6 vue cli.png" width="100%"/>
+- [`ESLint`](https://eslint.org/) 구문 오류([ESLint 란?](https://en.wikipedia.org/wiki/ESLint))
+  - <img src="./images/2.6 eslint (1).png" width="100%"/>
+  - 해결 방법
+    - `vue.config.js` 파일 생성하고 하기와 같은 코드 삽입
+    - `빌드 오류`는 발생하나 `오버레이` 안됨
+    ```javascript
+    module.exports = {
+      devServer: {
+        overlay: false,
+      },
+    };
+    ```
+  - ESLint 설정 파일 설정 방법
+    - root > `.eslintrc.js` 파일에 하기와 같이 개발자 커스텀 설정 가능
+  ```javascript
+  rules: {
+    "no-console": "error", // 정상을 위하여 "off"로 설정 필요
+    // "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    // "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+  },
+  ```
+    - `console` 명령서 사용시 `error` 출력으로 설정함으로 하기와 같이 오류 발생
+    - <img src="./images/2.6 eslint (2).png" width="100%"/>
+  - ESLint 구문 오류시 해당 구문에 `빨간줄`이 생기지 않을 경우
+    - VSCode `설정` > `settings.json`에 하기 코드 추가
+    ```json
+    "editor.codeActionsOnSave": {"source.fixAll.eslint": true},
+    "eslint.workingDirectories": [{"mode": "auto"}],
+    ```
+- [Prettier](https://prettier.io/) (일관성 있는 코드 포맷을 위한 웹팩)
+  - 하기의 이미지처럼 `prettier` 구문을 적용하면 코드에 붉은색 라인이 생기며 빌드 오류 발생
+  - <img src="./images/2.6 prettier (1).png" width="100%"/>
+  - 해결 방법
 
 
 
