@@ -4,6 +4,7 @@
 
 <script>
 import Demo from '../../demo/basic/Demo.vue';
+import Demo1 from '@/demo/basic/Demo.vue';
 export default {};
 </script>
 

@@ -1,0 +1,19 @@
+{
+    // 컴파일 옵션
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "~/*": [
+                "./*"
+            ],
+            "@/*": [
+                "./src/*"
+            ],
+        }
+    },
+    // 제외 옵션
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
