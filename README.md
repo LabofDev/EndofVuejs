@@ -184,6 +184,31 @@
   - 하기의 이미지처럼 `prettier` 구문을 적용하면 코드에 붉은색 라인이 생기며 빌드 오류 발생
   - <img src="./images/2.6 prettier (1).png" width="100%"/>
   - 해결 방법
+    - `설정`의 `eslint: validate` > `settings.json` 파일에서 하기 축
+    - <img src="./images/2.6 eslint settings.png" width="100%"/>
+    ```json
+    "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+      },
+      "eslint.workingDirectories": [
+          {
+              "mode": "auto"
+          }
+      ],
+      // ESLint
+      "eslint.validate":[
+          "vue", 
+          "javascript", 
+          "javascriptreact", 
+          "typescript", 
+          "typescriptreact"
+      ],
+      // don't format on save
+      "editor.formatOnSave": false,
+    ```
+    - `prettier` 확장 프로그램에서 `사용안함(작업영역)` 설정
+    - `설정`의 `Format on Save` 체크 해지
+    - <img src="./images/2.6 prettier settings.png" width="100%"/>
 
 
 
