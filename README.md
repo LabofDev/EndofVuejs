@@ -24,6 +24,7 @@
   - [Chrome](https://www.google.com/intl/ko/chrome/), [Git](https://git-scm.com/downloads), [Visual Studio Code](https://code.visualstudio.com/), [Node.js LTS 버전(v10.x 이상)](https://nodejs.org/ko/), [Vue.js Dev Tools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
   - Github
     - [개발 소스(Front-End) - Source](https://github.com/joshua1988/vue-til), [API(Back-End) - Source](https://github.com/joshua1988/vue-til-server)
+    - `vue-til-server`의 경우 `github`의 `root`에 존재하는 `vue-til-server-master.zip` 다운받아 사용
   - VS Code Plugin
     - 색 테마 : [Night Owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
     - 파일 아이콘 테마 : [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
