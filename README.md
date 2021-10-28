@@ -211,7 +211,8 @@
     - <img src="./images/2.6 prettier settings.png" width="100%"/>
 ### 2.7 개발 환경(기타)
 - 파일의 절대 경로를 사용해야 하는 이유
-  - 상대 경로를 이용한 컴포넌트 `import`
+  - 상대 경로를 이용한 컴포넌트 `import`는 depth가 많아 질수록 folder가 많아 질수록 복잡해 짐
+  - 이러한 상대 경로에서의 복잡함을 없애기 위해서 VSCode 설정을 활용한 절대 경로 사용
   - [jsconfig.json 파일 링크(Vue TIL 리포지토리)](https://github.com/joshua1988/vue-til/blob/complete/jsconfig.json)
   - [VSCode의 jsconfig.json 파일 설명 글](https://code.visualstudio.com/docs/languages/jsconfig)
 - <img src="./images/2.6 Absolute Path (1).png" width="100%"/>
