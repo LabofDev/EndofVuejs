@@ -24,6 +24,7 @@
   - [Chrome](https://www.google.com/intl/ko/chrome/), [Git](https://git-scm.com/downloads), [Visual Studio Code](https://code.visualstudio.com/), [Node.js LTS 버전(v10.x 이상)](https://nodejs.org/ko/), [Vue.js Dev Tools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
   - Github
     - [개발 소스(Front-End) - Source](https://github.com/joshua1988/vue-til), [API(Back-End) - Source](https://github.com/joshua1988/vue-til-server)
+    - `vue-til-server`의 경우 `github`의 `root`에 존재하는 `vue-til-server-master.zip` 다운받아 사용
   - VS Code Plugin
     - 색 테마 : [Night Owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
     - 파일 아이콘 테마 : [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
@@ -183,6 +184,31 @@
   - 하기의 이미지처럼 `prettier` 구문을 적용하면 코드에 붉은색 라인이 생기며 빌드 오류 발생
   - <img src="./images/2.6 prettier (1).png" width="100%"/>
   - 해결 방법
+    - `설정`의 `eslint: validate` > `settings.json` 파일에서 하기 축
+    - <img src="./images/2.6 eslint settings.png" width="100%"/>
+    ```json
+    "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+      },
+      "eslint.workingDirectories": [
+          {
+              "mode": "auto"
+          }
+      ],
+      // ESLint
+      "eslint.validate":[
+          "vue", 
+          "javascript", 
+          "javascriptreact", 
+          "typescript", 
+          "typescriptreact"
+      ],
+      // don't format on save
+      "editor.formatOnSave": false,
+    ```
+    - `prettier` 확장 프로그램에서 `사용안함(작업영역)` 설정
+    - `설정`의 `Format on Save` 체크 해지
+    - <img src="./images/2.6 prettier settings.png" width="100%"/>
 
 
 
