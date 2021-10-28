@@ -215,7 +215,11 @@
   - 이러한 상대 경로에서의 복잡함을 없애기 위해서 VSCode 설정을 활용한 절대 경로 사용
   - [jsconfig.json 파일 링크(Vue TIL 리포지토리)](https://github.com/joshua1988/vue-til/blob/complete/jsconfig.json)
   - [VSCode의 jsconfig.json 파일 설명 글](https://code.visualstudio.com/docs/languages/jsconfig)
-- <img src="./images/2.6 Absolute Path (1).png" width="100%"/>
+  - <img src="./images/2.6 Absolute Path (1).png" width="100%"/>
+  - <img src="./images/2.6 Absolute Path (2).png" width="100%"/>
+- Vue.js 공식팀에서 권고하는 스타일 가이드 준수
+  - Priotiry A : Essential, Priority B : Strongly Recommened
+  - [Vue.js 스타일 가이드 문서](https://kr.vuejs.org/v2/style-guide/index.html)
 
 
 
