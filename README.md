@@ -145,7 +145,7 @@
 ### 2.5 개발 환경(Swagger UI API)
 - `Node js`로 작서된 `Back-End API` 코드를 `Front-End` 개발자와 `커뮤니케이션`하기 위한 API UI
 - `RESTfull API`를 직접 테스트 할 수 있는 API UI
-### 2.6 개발 환경(프로젝트 구성)
+### 2.6 개발 환경(프로젝트 구성 - 프로젝트 생성, ESLint & Prettier)
 - [웹팩 데브 서버 설명 글](https://joshua1988.github.io/webpack-guide/devtools/webpack-dev-server.html)
 - [Vue.js 개발 생산성을 높여주는 도구 3가지](https://joshua1988.github.io/web-development/vuejs/boost-productivity/)
 - `vue --version` 으로 vue/cli 버전 확인
@@ -209,6 +209,12 @@
     - `prettier` 확장 프로그램에서 `사용안함(작업영역)` 설정
     - `설정`의 `Format on Save` 체크 해지
     - <img src="./images/2.6 prettier settings.png" width="100%"/>
+### 2.7 개발 환경(기타)
+- 파일의 절대 경로를 사용해야 하는 이유
+  - 상대 경로를 이용한 컴포넌트 `import`
+  - [jsconfig.json 파일 링크(Vue TIL 리포지토리)](https://github.com/joshua1988/vue-til/blob/complete/jsconfig.json)
+  - [VSCode의 jsconfig.json 파일 설명 글](https://code.visualstudio.com/docs/languages/jsconfig)
+- <img src="./images/2.6 Absolute Path (1).png" width="100%"/>
 
 
 
