@@ -221,13 +221,13 @@
   - Priotiry A : Essential, Priority B : Strongly Recommened
   - [Vue.js 스타일 가이드 문서](https://kr.vuejs.org/v2/style-guide/index.html)
 
-
-
-
-
 ## 3. Router & Design of Component
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-3.router_component`**
 - summary
+
+
+
+
 ## 4. Development of Member Register
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-41.dev_member`**
 - summary
