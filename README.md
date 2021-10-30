@@ -241,7 +241,23 @@ $ npm i
 ```command
 $ npm i vue-router
 ```
-
+- 코드 스플리팅
+  - 최초 로딩시 리소스를 최소화하여 가져오고 이후 뷰페이지 호출시 리소스를 로딩함
+  - <img src="./images/3.1 code spliting.png" width="100%"/>
+  ```javascript
+  export default new VueRouter({
+	routes: [
+      {
+        path: '/login',
+        component: () => import('@/views/LoginPage.vue'),
+      },
+      {
+        path: '/signup',
+        component: () => import('@/views/SignupPage.vue'),
+      },
+    ],
+  });
+  ```
 
 
 
