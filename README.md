@@ -224,6 +224,23 @@
 ## 3. Router & Design of Component
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-3.router_component`**
 - summary
+  - 로그인, 회원가입 UI 개발
+- [수업 깃헙 리포지토리 안내](https://github.com/joshua1988/vue-til)
+```command
+// vue-til 소스를 최초에 설치할 경우
+$ git clone https://github.com/joshua1988/vue-til
+$ git checkout 1_setup
+$ npm i
+```
+- [Window History API](https://developer.mozilla.org/en-US/docs/Web/API/Window/history)
+- [웹팩 코드 스플리팅 문서](https://webpack.js.org/guides/code-splitting/)
+- [Vue.js 다이나믹 임포트 문서](https://vuejs.org/v2/guide/components-dynamic-async.html#ad)
+### 3.1 Router
+- LoginPage, SignupPage 생성 및 라우터 설정
+- router 설치
+```command
+$ npm i vue-router
+```
 
 
 
