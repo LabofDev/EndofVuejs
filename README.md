@@ -258,7 +258,31 @@ $ npm i vue-router
     ],
   });
   ```
-
+- [뷰 라우터 오픈 소스](https://github.com/vuejs/vue-router)
+- [뷰 라우터 History Mode 주의 사항 문서](https://router.vuejs.org/guide/essentials/history-mode.html)
+  - `history` 모드의 경우 URL에 `#`이 없이 나타난다.(서버가 새로운 페이지로 인식하지 못 함)
+  - 서버가 새로운 페이지로 인식을 못 함으로 서버에 설정이 필요함.
+- fallback router
+  - 지정된 경로가 아닌 경우를 대비
+```javascript
+export default new VueRouter({
+	mode: 'history',
+	routes: [
+		{
+			path: '/login',
+			component: () => import('@/views/LoginPage.vue'),
+		},
+		{
+			path: '/signup',
+			component: () => import('@/views/SignupPage.vue'),
+		},
+		{
+			path: '*',
+			component: () => import('@/views/NotFoundPage.vue'),
+		},
+	],
+});
+```
 
 
 ## 4. Development of Member Register
