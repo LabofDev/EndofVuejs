@@ -284,7 +284,6 @@ export default new VueRouter({
 });
 ```
 
-
 ## 4. Development of Member Register
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-4.dev_member`**
 - summary
@@ -307,11 +306,13 @@ export default new VueRouter({
 - <img src="./images/5.1 configuration.png" width="100%"/>
 - `VUE_APP` 접두사가 붙으면 코드에서 자동 인식
 
-
-
 ## 6. Development of Login
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-6.dev_login`**
 - summary
+  - 종합 내용
+
+
+
 ## 7. Store & Login State Management
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-7.store_state`**
 - summary
