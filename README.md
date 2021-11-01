@@ -293,6 +293,8 @@ export default new VueRouter({
 - [async await 정리글](https://joshua1988.github.io/web-development/javascript/js-async-await/)
 - [ES6 템플릿 리터럴(백틱) 정리글](https://joshua1988.github.io/es6-online-book/template-literal.html)
 - [ES6 Destructuring 정리글](https://joshua1988.github.io/es6-online-book/destructuring.html)
+- <img src="./images/4.1 member register form.png" width="100%"/>
+- `SignupPage`에서 `SignupForm` 콤포넌트사용하며, `SignupPage`에서 `Axios` 사용
 
 ## 5. Configuration of Project
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-5.configure`**
