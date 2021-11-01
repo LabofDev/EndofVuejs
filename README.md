@@ -286,8 +286,14 @@ export default new VueRouter({
 
 
 ## 4. Development of Member Register
-- [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-41.dev_member`**
+- [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-4.dev_member`**
 - summary
+  - 회원 가입을 위한 `가입 폼 양식`, `데이터 바인딩`, `이벤트 연결`, `API`에 대해서 개발
+- [타입스크립트 핸드북](https://joshua1988.github.io/ts/)
+- [async await 정리글](https://joshua1988.github.io/web-development/javascript/js-async-await/)
+- [ES6 템플릿 리터럴(백틱) 정리글](https://joshua1988.github.io/es6-online-book/template-literal.html)
+- [ES6 Destructuring 정리글](https://joshua1988.github.io/es6-online-book/destructuring.html)
+
 ## 5. Configuration of Project
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-5.configure`**
 - summary
