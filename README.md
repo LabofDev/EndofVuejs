@@ -299,6 +299,16 @@ export default new VueRouter({
 ## 5. Configuration of Project
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-5.configure`**
 - summary
+  - `axios` 사용 `api` 콤포넌트에서 환경 설정 값을 사용
+- 참고 자료
+  - [axios create() 문서](https://github.com/axios/axios#axioscreateconfig)
+  - [웹팩 DefinePlugin 문서](https://webpack.js.org/plugins/define-plugin/)
+  - [Vue CLI env 파일 규칙 문서](https://cli.vuejs.org/guide/mode-and-env.html#modes-and-environment-variables)
+- <img src="./images/5.1 configuration.png" width="100%"/>
+- `VUE_APP` 접두사가 붙으면 코드에서 자동 인식
+
+
+
 ## 6. Development of Login
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-6.dev_login`**
 - summary
