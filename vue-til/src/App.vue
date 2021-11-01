@@ -9,6 +9,7 @@
 </template>
 
 <script>
+// 리마크 입니다.
 export default {};
 </script>
 
