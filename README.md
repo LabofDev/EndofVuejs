@@ -309,7 +309,8 @@ export default new VueRouter({
 ## 6. Development of Login
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-6.dev_login`**
 - summary
-  - 종합 내용
+  - `로그인 양식`, `API`, `Validation` & `Exception` 기능 구현
+- <img src="./images/6.1 login component.png" width="100%"/>
 
 
 
