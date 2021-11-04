@@ -319,6 +319,10 @@ export default new VueRouter({
 ## 7. Store & Login State Management
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-7.store_state`**
 - summary
+  - `Style`, `Main Page`
+- Style
+
+
 ## 8. API Authentication by Token
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-8.api_auth_token`**
 - summary
