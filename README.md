@@ -316,8 +316,6 @@ export default new VueRouter({
   - PWD : 1234
 - <img src="./images/6.1 login component.png" width="100%"/>
 
-
-
 ## 7. Store & Login State Management
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-7.store_state`**
 - summary
