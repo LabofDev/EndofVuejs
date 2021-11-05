@@ -320,7 +320,15 @@ export default new VueRouter({
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-7.store_state`**
 - summary
   - `Style`, `Main Page`
-- Style
+### 7.1 Style
+  - css/common.css, css/reset.css
+  - App.vue, AppHeader.vue
+### 7.2 [뷰 라우터 Programmatic Navigation 문서](https://router.vuejs.org/guide/essentials/navigation.html#programmatic-navigation)
+  - `vue router > router-link`를 사용(html 레벨)
+  - `vue router > router.push`를 사용(javascript 레벨)
+### 7.3 로그인 후 사용자 정보 표시(`store`를 사용)
+  - <img src="./images/7.1 vuex-store.png" width="100%"/>
+  - 
 
 
 ## 8. API Authentication by Token
