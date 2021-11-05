@@ -37,19 +37,23 @@ export default {
 	},
 	methods: {
 		async submitForm() {
-			console.log('폼 제출');
-			const userData = {
-				username: this.username,
-				password: this.password,
-				nickname: this.nickname,
-			};
-			// const response = await registerUser(userData);
-			const { data } = await registerUser(userData);
-			// console.log(response.data);
-			console.log(data.username);
-			this.logMessage = `${data.username}님이 가입되었습니다.`;
-
-			this.initForm();
+			try {
+				console.log('폼 제출');
+				const userData = {
+					username: this.username,
+					password: this.password,
+					nickname: this.nickname,
+				};
+				// const response = await registerUser(userData);
+				const { data } = await registerUser(userData);
+				// console.log(response.data);
+				console.log(data.username);
+				this.logMessage = `${data.username}님이 가입되었습니다.`;
+			} catch (error) {
+				this.logMessage = error.response.data;
+			} finally {
+				this.initForm();
+			}
 		},
 		initForm() {
 			this.username = '';

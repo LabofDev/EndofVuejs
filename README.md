@@ -310,8 +310,10 @@ export default new VueRouter({
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-6.dev_login`**
 - summary
   - `로그인 양식`, `API`, `Validation` & `Exception` 기능 구현
-  - test login account
-    - id : a@a.com, pwd : 1234
+- [Email Validation 정규 표현식 코드](https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript)
+- 로그인 계정
+  - ID : a@a.com
+  - PWD : 1234
 - <img src="./images/6.1 login component.png" width="100%"/>
 
 ## 7. Store & Login State Management
