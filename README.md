@@ -333,10 +333,12 @@ export default new VueRouter({
     - `package.json`의 `devDependencies`는 빌드될때 포함되지 않음
   - `Vuex`를 활용하여 `Store`, `State`, `mutations` & `getters`를 활용
 
-
 ## 8. API Authentication by Token
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-8.api_auth_token`**
 - summary
+
+
+
 ## 9. Development of Retrieve Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-9.dev_retrieve`**
 - summary
