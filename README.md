@@ -328,7 +328,10 @@ export default new VueRouter({
   - `vue router > router.push`를 사용(javascript 레벨)
 ### 7.3 로그인 후 사용자 정보 표시(`store`를 사용)
   - <img src="./images/7.1 vuex-store.png" width="100%"/>
-  - 
+  - [개발용 라이브러리와 배포용 라이브러리 구분하기 문서](https://joshua1988.github.io/webpack-guide/build/npm-module-install.html#npm-%EC%A7%80%EC%97%AD-%EC%84%A4%EC%B9%98-%EC%98%B5%EC%85%98-2%EA%B0%80%EC%A7%80)
+    - `npm run build`는 `package.json`의 `dependencies`에 해당하는 라이브러리를 포함하여 빌드
+    - `package.json`의 `devDependencies`는 빌드될때 포함되지 않음
+  - `Vuex`를 활용하여 `Store`, `State`, `mutations` & `getters`를 활용
 
 
 ## 8. API Authentication by Token
