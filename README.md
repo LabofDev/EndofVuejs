@@ -336,7 +336,9 @@ export default new VueRouter({
 ## 8. API Authentication by Token
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-8.api_auth_token`**
 - summary
-  - 
+  - `API`를 통하여 통신할 경우 `JWT(Json Web Token)`인증을 통하여 통신
+- [Json web 토큰 문서](https://jwt.io/)
+- [액시오스 인터셉터 문서](https://github.com/axios/axios#interceptors)
 
 
 
