@@ -1,12 +1,17 @@
 <template>
 	<header>
 		<div>
-			<router-link to="/main" class="logo"> TIL </router-link>
+			<router-link to="/" class="logo">
+				TIL
+				<span v-if="isUserLogin">by {{ $store.state.username }}</span>
+			</router-link>
 		</div>
 		<div class="navigations">
 			<template v-if="isUserLogin">
-				<span class="username">{{ $store.state.username }}님 반갑습니다.</span>
-				<a href="javascript:;" @click="logoutUser">Logout</a>
+				<!-- <span class="username">{{ $store.state.username }}님 반갑습니다.</span> -->
+				<a href="javascript:;" @click="logoutUser" class="logout-button">
+					Logout
+				</a>
 			</template>
 			<template v-else>
 				<router-link to="/login">로그인</router-link>
