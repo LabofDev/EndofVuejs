@@ -336,6 +336,7 @@ export default new VueRouter({
 ## 8. API Authentication by Token
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-8.api_auth_token`**
 - summary
+  - 
 
 
 
