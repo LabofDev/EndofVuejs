@@ -341,11 +341,13 @@ export default new VueRouter({
 - [액시오스 인터셉터 문서](https://github.com/axios/axios#interceptors)
   - 인터셉터를 통하여 `axios.create`에서의 `token`값 할당에 대한 초기화 문제를 해결
 
-
-
 ## 9. Development of Retrieve Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-9.dev_retrieve`**
 - summary
+  - 목록 조회 개발
+
+
+
 ## 10. Management of Authentication Value using Browser Storage
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-10.mgmt_auth_browser_storage`**
 - summary
