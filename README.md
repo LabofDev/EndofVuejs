@@ -344,7 +344,7 @@ export default new VueRouter({
 ## 9. Development of Retrieve Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-9.dev_retrieve`**
 - summary
-  - 목록 조회 개발
+  - `목록 조회` 개발
 
 
 
