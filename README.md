@@ -339,6 +339,7 @@ export default new VueRouter({
   - `API`를 통하여 통신할 경우 `JWT(Json Web Token)`인증을 통하여 통신
 - [Json web 토큰 문서](https://jwt.io/)
 - [액시오스 인터셉터 문서](https://github.com/axios/axios#interceptors)
+  - 인터셉터를 통하여 `axios.create`에서의 `token`값 할당에 대한 초기화 문제를 해결
 
 
 
