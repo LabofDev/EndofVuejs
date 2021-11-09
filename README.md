@@ -60,8 +60,6 @@
         "args": [],
         "icon": "terminal-cmd"
     },
-
-
 },
 // "GitBash"로 설정하면 "Bash"가 기본으로 설정 됨
 "terminal.integrated.defaultProfile.windows": "Command Prompt",
@@ -394,8 +392,6 @@ export default {
 };
 </script>
 ```
-
-
 
 ## 10. Management of Authentication Value using Browser Storage
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-10.mgmt_auth_browser_storage`**
