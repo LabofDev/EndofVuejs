@@ -344,7 +344,56 @@ export default new VueRouter({
 ## 9. Development of Retrieve Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-9.dev_retrieve`**
 - summary
-  - `목록 조회` 개발
+  - `목록 조회` 개발, `style` 적용, `컴포넌트화`, `로딩 상태` & `로딩 스피너` 개발
+- `PostItem`에 대하여 컴포넌트화 (MainPage에서 `props`로 컴포넌트로 값 전달)
+```javascript
+// MainPage.vue
+<template>
+	<div>
+		<div class="main list-container contents">
+			<h1 class="page-header">Today I Learned</h1>
+			<ul>
+				<PostListItem
+					v-for="postItem in postItems"
+					v-bind:key="postItem._id"
+					v-bind:postItem="postItem"
+				></PostListItem>
+			</ul>
+		</div>
+	</div>
+</template>
+export default {
+	components: {
+		PostListItem,
+	},
+}
+
+// PostListItem.vue
+<template>
+	<li>
+		<div class="post-title">
+			{{ postItem.title }}
+		</div>
+		<div class="post-contents">
+			{{ postItem.contents }}
+		</div>
+		<div class="post-time">
+			{{ postItem.createdAt }}
+		</div>
+	</li>
+</template>
+
+<script>
+export default {
+	props: {
+		postItem: {
+			type: Object,
+			required: true,
+		},
+	},
+};
+</script>
+```
 
 
 
