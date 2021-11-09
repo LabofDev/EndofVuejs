@@ -396,13 +396,28 @@ export default {
 ## 10. Management of Authentication Value using Browser Storage
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-10.mgmt_auth_browser_storage`**
 - summary
-  - 간략 소개
-
-
+  - 로그인한 세션 정보를 위하여 쿠키 사용
+  - 게시물을 신규 생성하는 UI 개발
+### 10.1 Cookie Save
+- 쿠키 저장
+- <img src="./images/10.1 cookie save 1.png" width="100%"/>
+- `store > index.js`의 `state`에서 쿠키값 보존을 위한 코드 추가
+```javascript
+state: {
+		username: getUserFromCookie() || '',
+		token: getAuthFromCookie() || '',
+	},
+```
+### 10.2 코드 정리
+- async, await를 왜 사용하는지 반드시 인지하고 넘어 가야 함
+- 자바스크립트는 기본이 비동기 처리 방식이나 async, await를 사용하여 동기화 처리 필요
 
 ## 11. Development of Create Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-11.dev_create`**
 - summary
+
+
+
 ## 12. Middle Adjustment
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-12.middle_adj`**
 - summary

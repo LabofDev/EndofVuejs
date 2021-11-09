@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import { loginUser } from '@/api/index';
 import { validateEmail } from '@/utils/validation';
 
 export default {
@@ -53,12 +52,24 @@ export default {
 					username: this.username,
 					password: this.password,
 				};
-				// const response = await loginUser(userData);
-				// console.log(response);
-				const { data } = await loginUser(userData);
-				console.log(data.token);
-				this.$store.commit('setToken', data.token);
-				this.$store.commit('setUsername', data.user.username);
+				await this.$store.dispatch('LOGIN', userData);
+
+				// ===============================================>
+				// 하기 코드는 코드양을 줄이기 위하여 store > actions로 이동
+				// // const response = await loginUser(userData);
+				// // console.log(response);
+				// const { data } = await loginUser(userData);
+				// console.log(data.token);
+
+				// // store에 토큰과 사용자 이름 설정
+				// this.$store.commit('setToken', data.token);
+				// this.$store.commit('setUsername', data.user.username);
+
+				// // 쿠키에 토큰과 사용자 이름 설정
+				// saveAuthToCookie(data.token);
+				// saveUserToCookie(data.user.username);
+				// ===============================================>
+
 				this.$router.push('/main');
 				// this.logMessage = `${data.user.username} 님 환영합니다.`;
 			} catch (error) {
