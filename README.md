@@ -396,6 +396,10 @@ export default {
 ## 10. Management of Authentication Value using Browser Storage
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-10.mgmt_auth_browser_storage`**
 - summary
+  - 간략 소개
+
+
+
 ## 11. Development of Create Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-11.dev_create`**
 - summary
