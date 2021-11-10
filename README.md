@@ -397,7 +397,6 @@ export default {
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-10.mgmt_auth_browser_storage`**
 - summary
   - 로그인한 세션 정보를 위하여 쿠키 사용
-  - 게시물을 신규 생성하는 UI 개발
 ### 10.1 Cookie Save
 - 쿠키 저장
 - <img src="./images/10.1 cookie save 1.png" width="100%"/>
@@ -415,6 +414,10 @@ state: {
 ## 11. Development of Create Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-11.dev_create`**
 - summary
+  - 게시물을 신규 생성하는 UI 개발
+- 참고 싸이트
+  - [아이오닉 아이콘 사이트](https://ionic.io/ionicons/usage)
+- <img src="./images/11.1 create_post.png" width="100%"/>
 
 
 
