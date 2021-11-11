@@ -539,6 +539,8 @@ state: {
 ## 14. Development of Delete Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-14.dev_delete`**
 - summary
+
+
 ## 15. Development of Modify Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-15.dev_modify`**
 - summary
