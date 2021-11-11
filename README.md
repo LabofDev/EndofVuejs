@@ -475,6 +475,67 @@ state: {
 ## 13. API Function Modularity
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-13.api_modularity`**
 - summary
+  - `API` function의 모듈화로 기능의 성격별로 또는 서브-도메인의 성격별로 분리(모듈화) 진행
+  - 추후 시스템이 확장될 경우를 대비하여 처음부터 `확장성`을 고려하여 `API 호출 함수` 모듈화 필요
+- Key Sample Code
+  - `api > index.js` 파일에서 기능적으로 유사한 함수끼리 모아 분리 모듈화
+  - 인스터스를 2개로 구분하는데 `인증전(로그인전)`과 `인증후(로그인후)`
+  ```javascript
+  import axios from 'axios';
+  import { setInterceptors } from './common/interceptors';
+
+  // 엑시오스 초기화 함수 (인증전 즉, 로그인 전)
+  function createInstance() {
+    return axios.create({
+      baseURL: process.env.VUE_APP_API_URL,
+    });
+  }
+
+  // 액시오스 초기화 함수 (인증후 즉, 로그인 후)
+  function createInstanceWithAuth(url) {
+    const instance = axios.create({
+      baseURL: `${process.env.VUE_APP_API_URL}${url}`,
+    });
+    return setInterceptors(instance);
+  }
+  export const instance = createInstance();
+  export const posts = createInstanceWithAuth('posts');
+  ```
+  - `api > auth.js` 로그인 관련 `API function 모듈`
+  ```javascript
+  // 로그인, 회원 가입, 회원 탈퇴 등을 위한 API
+  import { instance } from './index';
+
+  // 회원가입 API
+  function registerUser(userData) {
+    return instance.post('signup', userData);
+  }
+
+  // 로그인 API
+  function loginUser(userData) {
+    return instance.post('login', userData);
+  }
+
+  export { registerUser, loginUser };
+  ```
+  - `api > posts.js` 게시물 관련 `API function 모듈`
+  ```javascript
+  // 학습 노트 조작과 관련된 CRUD API 함수
+  import { posts } from './index';
+
+  // 학습 노트 데이터를 조회하는 API
+  function fetchPosts() {
+    return posts.get('/');
+  }
+
+  // 학습 노트 데이터를 생성하는 API
+  function createPost(postData) {
+    return posts.post('/', postData);
+  }
+
+  export { fetchPosts, createPost };
+  ```
+
 ## 14. Development of Delete Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-14.dev_delete`**
 - summary
