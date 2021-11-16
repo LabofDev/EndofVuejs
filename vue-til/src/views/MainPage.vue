@@ -9,6 +9,7 @@
 					v-for="postItem in postItems"
 					v-bind:key="postItem._id"
 					v-bind:postItem="postItem"
+					v-on:refresh="fetchData"
 				></PostListItem>
 			</ul>
 		</div>

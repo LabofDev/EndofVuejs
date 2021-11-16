@@ -536,16 +536,28 @@ state: {
   export { fetchPosts, createPost };
   ```
 
-## 14. Development of Delete Note Data
+## 14. & 15. Development of Delete Note Data & Modify Note Data
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-14.dev_delete`**
 - summary
-  - 임시 저장 잔디용 일요일 잔디 심기용 ㅋ
+  - 게시물 삭제 및 수정
+- 게시물 삭제
+  - `API`에 삭제 함수 생성 `PostListItem`에서 `deleteItem` 이벤트 처리
+  ```javascript
+  async deleteItem() {
+			if (confirm('You want to delete it?')) {
+				await deletePost(this.postItem._id);
+				this.$emit('refresh');
+			}
+		},
+  ```
+- 게시물 수정
+  - `API`에서 `id`를 인자로 게시물을 조회하는 함수 추가
+  - `PostEditPage.vue`와 `PostEditForm.vue`를 생성하여 데이터 변경
+- `삭제`와 `수정`후 `push`를 사용하여 `main`으로 이동
+```javascript
+this.$router.push('/main');
+```
 
-
-
-## 15. Development of Modify Note Data
-- [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-15.dev_modify`**
-- summary
 ## 16. Data Formatting
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-16.data_format`**
 - summary
