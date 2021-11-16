@@ -561,6 +561,9 @@ this.$router.push('/main');
 ## 16. Data Formatting
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-16.data_format`**
 - summary
+
+
+
 ## 17. Router Advanced
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-17.router_adv`**
 - summary
