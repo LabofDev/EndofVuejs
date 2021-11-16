@@ -540,6 +540,7 @@ state: {
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-14.dev_delete`**
 - summary
   - 게시물 삭제 및 수정
+  - [Toast Popup](https://github.com/joshua1988/vue-til/blob/complete/src/components/common/ToastPopup.vue)
 - 게시물 삭제
   - `API`에 삭제 함수 생성 `PostListItem`에서 `deleteItem` 이벤트 처리
   ```javascript
