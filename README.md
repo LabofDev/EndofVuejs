@@ -629,6 +629,12 @@ router.beforeEach((to, from, next) => {
 ## 18. Introduce of Front-End Testing
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-18.front_end_test`**
 - summary
+  - [State of JS 2019 - 테스팅](https://2019.stateofjs.com/testing/)
+  - [Jest 공식 사이트](https://jestjs.io/)
+  - [Jest describe() API 문서](https://jestjs.io/docs/api#describename-fn)
+
+
+
 ## 19. End of
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-19.end`**
 - summary
