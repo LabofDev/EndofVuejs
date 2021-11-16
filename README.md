@@ -597,6 +597,35 @@ this.$router.push('/main');
 ## 17. Router Advanced
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-17.router_adv`**
 - summary
+  - 라우터에서 권한 설정
+  - Logo 클릭시 `v-bind:on="computed"`를 사용하여 'main' 또는 'login' 분기
+  - Logout 클릭시 `cookie(til_auth, til_user)`와 `state의 token` 제거
+  - [라우터 네비게이션 가드 문서](https://router.vuejs.org/guide/advanced/navigation-guards.html)
+  - [라우터 네비게이션 가드 관련 영상(완벽 가이드 수강 권한 필요)](https://www.inflearn.com/course/vue-js/lecture/17055?tab=curriculum)
+- Sample Code
+```javascript
+//routes > index.js
+const router = new VueRouter({
+	mode: 'history',
+	routes: [
+    {
+      path: '/post/:id',
+      component: () => import('@/views/PostEditPage.vue'),
+      meta: { needAuth: true },
+    },
+  ]
+});
+
+router.beforeEach((to, from, next) => {
+	if (to.meta.needAuth && !store.getters.isLogin) {
+		console.log('인증이 필요합니다.');
+		next('/login');
+		return;
+	}
+	next();
+});
+```
+
 ## 18. Introduce of Front-End Testing
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-18.front_end_test`**
 - summary
