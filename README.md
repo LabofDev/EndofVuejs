@@ -562,6 +562,38 @@ this.$router.push('/main');
 ## 16. Data Formatting
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-16.data_format`**
 - summary
+  - 특정 데이터의 `포맷팅` 처리
+  - [뷰 필터 안내 문서](https://vuejs.org/v2/guide/filters.html#ad)
+- 16.1 `Filter` 함수 사용
+  - utils > filters.js 정의
+  ```javascript
+  export function formatDate(value) {
+    const date = new Date(value);
+    const year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    month = month > 9 ? month : `0${month}`;
+    const day = date.getDate();
+    let hours = date.getHours();
+    hours = hours > 9 ? hours : `0${hours}`;
+    const minutes = date.getMinutes();
+    return `${year}-${month}-${day} ${hours}:${minutes}`;
+  }
+  ```
+  - main.js에 전역으로 사용할 필터 정의
+  ```javascript
+  //main.js
+  import { formatDate } from '@/utils/filters';
+  Vue.filter('formatDate', formatDate);
+  ```
+  - 전역으로 정의한 필터 사용
+  ```javascript
+  <div class="post-time">
+    {{ postItem.createdAt | formatDate }}
+    <i class="icon ion-md-create" @click="routeEditPage"></i>
+    <i class="icon ion-md-trash" @click="deleteItem"></i>
+  </div>
+  ```
+
 ## 17. Router Advanced
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-17.router_adv`**
 - summary
