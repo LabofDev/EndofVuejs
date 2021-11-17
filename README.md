@@ -633,6 +633,7 @@ router.beforeEach((to, from, next) => {
   - [Jest 공식 사이트](https://jestjs.io/)
   - [Jest describe() API 문서](https://jestjs.io/docs/api#describename-fn)
   - [Vue Test Utils 공식 문서](https://vue-test-utils.vuejs.org/guides/)
+  - [find() API 문서](https://vue-test-utils.vuejs.org/api/wrapper/#find)
 - 18.1 `Jest` 테스트를 위한 환경 설정
   ```javascript
   //`package.json` 설정
@@ -727,7 +728,7 @@ router.beforeEach((to, from, next) => {
 		expect(button.element.disabled).toBeTruthy();
 	});
   ```
-  
+
 ## 19. End of
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-19.end`**
 - summary
