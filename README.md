@@ -732,3 +732,11 @@ router.beforeEach((to, from, next) => {
 ## 19. End of
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-19.end`**
 - summary
+  - 프로젝트 구성 방법
+    - ESLint, Prettier
+    - env
+  - REST API를 이용한 CRUD Application 구현 방법
+  - Back-End API 문서 보는 방법 및 Back-End 개발자와 협업할때의 주의 사항
+  - axios 인터셉터와 모듈화를 이용한 API 함수 설계
+  - Router 페이지 권한 처리
+  - Front-End 테스트 방법
