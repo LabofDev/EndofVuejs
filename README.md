@@ -629,6 +629,47 @@ router.beforeEach((to, from, next) => {
 ## 18. Introduce of Front-End Testing
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-18.front_end_test`**
 - summary
+  - [State of JS 2019 - 테스팅](https://2019.stateofjs.com/testing/)
+  - [Jest 공식 사이트](https://jestjs.io/)
+  - [Jest describe() API 문서](https://jestjs.io/docs/api#describename-fn)
+  - [Vue Test Utils 공식 문서](https://vue-test-utils.vuejs.org/guides/)
+- 18.1 `Jest` 테스트를 위한 환경 설정
+  ```javascript
+  //`package.json` 설정
+    "scripts": {
+    "test": "vue-cli-service test:unit --watchAll",
+  },
+  //--watchAll : 변경즉시 반영 됨
+  ```
+  ```javascript
+  //jest.config.js 설정
+  module.exports = {
+    preset: '@vue/cli-plugin-unit-jest',
+    testMatch: [
+      '<rootDir>/src/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)',
+    ],
+  };
+  ```
+  ```command
+  // 테스트 실행 명령어
+  $npm t
+  ```
+  ```javacript
+  // jest 함수들의 eslint 인식 빨간펜 처리
+  // .eslintrc.js
+  env: {
+    node: true,
+    jest: true,
+  },
+  ```
+- 18.2 `Jest` 일반 사항
+  - 제일 먼저 `jest.config` 파일의 설정을 참고하며, 설정 파일이 없다면 하기의 기본 설정 폴더를 참고
+    - `test > unit > *.spec.js`
+  - 일반적으로 `테스트 스크립트` 파일은 테스트 `대상의 인근`에 생성하고 관리
+  - 또는 `jest.config.js`파일에서와 같이 `__tests__`와 같이 폴더 생성하여 관리
+
+
+
 ## 19. End of
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-19.end`**
 - summary
