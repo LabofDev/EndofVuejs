@@ -20,6 +20,7 @@
 					:disabled="!isUsernameValid || !password"
 					type="submit"
 					class="btn"
+					v-bind:class="!isUsernameValid || !password ? 'disabled' : null"
 				>
 					로그인
 				</button>

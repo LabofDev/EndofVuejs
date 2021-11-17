@@ -667,9 +667,67 @@ router.beforeEach((to, from, next) => {
     - `test > unit > *.spec.js`
   - 일반적으로 `테스트 스크립트` 파일은 테스트 `대상의 인근`에 생성하고 관리
   - 또는 `jest.config.js`파일에서와 같이 `__tests__`와 같이 폴더 생성하여 관리
+- 18.3 `Jest Test Code` 작성
+  - vuejs test library
+  ```javascript
+  import { shallowMount } from '@vue/test-utils';
+  ```
+  - find() function sample
+  ```javascript
+  import LoginForm from './LoginForm.vue';
+  import { shallowMount } from '@vue/test-utils';
 
+  describe('LoginForm.vue', () => {
+    test('ID는 이메일 형식이여야 한다.', () => {
+      const wrapper = shallowMount(LoginForm);
+      const idInput = wrapper.find('#username');
+      console.log(idInput.html());
+    });
+  });
+  ```
+  - 인스턴스를 생성한 `vue` 페이지의 `computed`에도 접근 가능
+  ```javascript
+  describe('LoginForm.vue', () => {
+    test('ID는 이메일 형식이여야 한다.', () => {
+      const wrapper = shallowMount(LoginForm, {
+        data() {
+          return {
+            username: 'test@abc.com',
+          };
+        },
+      });
+      const idInput = wrapper.find('#username');
+      console.log('InputBox Value ', idInput.element.value);
+      console.log(wrapper.vm.isUsernameValid);
+    });
+  });
+  ```
+  - `LoginForm.vue`에서 `로그인` 버튼의 활성/비활성화 코드 추가후 테스트 코드 작성
+  ```javascript
+  // LoginForm.vue
+  <button
+    :disabled="!isUsernameValid || !password"
+    type="submit"
+    class="btn"
+    v-bind:class="!isUsernameValid || !password ? 'disabled' : null"
+  >
 
-
+  // LoginForm.spec.js
+  test('#3. ID와 PWD가 입력되지 않으면 로그인 버튼이 비활성화 된다.', () => {
+		const wrapper = shallowMount(LoginForm, {
+			data() {
+				return {
+          // 값이 없으면 통과, 값이 있으면 실패
+					username: 'a@a.com',
+					password: '1234',
+				};
+			},
+		});
+		const button = wrapper.find('button'); // '.btn'
+		expect(button.element.disabled).toBeTruthy();
+	});
+  ```
+  
 ## 19. End of
 - [Github](https://github.com/LabofDev/Vue.git) Branch Name : **`vue-endofvue-19.end`**
 - summary
